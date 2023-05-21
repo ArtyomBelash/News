@@ -1,0 +1,35 @@
+body {
+            background-color: #f8f9fa;
+        }
+        .news-container {
+            margin-top: 3rem;
+        }
+        .news-item {
+            background-color: #ffffff;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .news-image {
+            margin-bottom: 1rem;
+        }
+        .news-title {
+            margin-bottom: 0.5rem;
+        }
+        .news-meta {
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+        .news-description {
+            margin-bottom: 1rem;
+        }
+
+h2 {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #007bff;
+        text-align: center;
+        margin: 0;
+}

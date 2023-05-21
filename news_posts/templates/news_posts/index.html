@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block page_content %}
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 mx-auto news-container">
+                {% for i in news %}
+                <div class="news-item">
+                    <a href="{{i.url}}" class="text-decoration-none"><h2 class="news-title">{{i.title}}</h2></a>
+                    <p class="news-meta">Author: {{i.author}} | Published: {{ i.publishedAt|slice:"0:10" }}</p>
+                    <img src="{{i.urlToImage}}" alt="{{i.title}}" class="img-fluid news-image">
+                    <p class="news-description">{{i.description| linebreaks | truncatewords:100}}</p>
+                    <a href="{{i.url}}" class="btn btn-primary">More</a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
