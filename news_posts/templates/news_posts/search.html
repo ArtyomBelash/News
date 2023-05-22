@@ -9,7 +9,8 @@
                 <p class="news-meta">Author: {{i.author}} | Published: {{ i.publishedAt|slice:"0:10" }}</p>
                 <img src="{{i.urlToImage}}" alt="{{i.title}}" class="img-fluid news-image">
                 <p class="news-description">{{i.description| linebreaks | truncatewords:100}}</p>
-                <a href="{{i.url}}" class="btn btn-primary">More</a>
+                <div align="right">
+                    <a href="{{i.url}}" class="btn btn-primary">More</a></div>
             </div>
             {% endfor %}
         </div>
