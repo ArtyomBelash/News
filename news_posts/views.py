@@ -27,11 +27,8 @@ class SearchView(ListView):
 
     def get_queryset(self):
         if self.request.method == 'GET':
-            queryset = []
             search_query = self.request.GET.get('search')
             if search_query:
-                for i in get_response():
-                    if search_query.lower() in i['title'].lower():
-                        queryset.append(i)
+                queryset = [i for i in get_response() if search_query.lower() in i['title'].lower()]
                 return queryset
             return get_response()
