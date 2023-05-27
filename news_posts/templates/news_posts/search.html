@@ -3,6 +3,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8 mx-auto news-container">
+            {% if queryset %}
             {% for i in queryset %}
             <div class="news-item">
                 <a href="{{i.url}}" class="text-decoration-none"><h2 class="news-title">{{i.title}}</h2></a>
@@ -13,6 +14,11 @@
                     <a href="{{i.url}}" class="btn btn-primary">More</a></div>
             </div>
             {% endfor %}
+            {% else %}
+            <h2>Sorry, no matches were found.
+                Try a new search.
+            </h2>
+            {% endif %}
         </div>
     </div>
 </div>
